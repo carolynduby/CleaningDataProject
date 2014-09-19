@@ -1,8 +1,3 @@
----
-title: "README"
-output: html_document
----
-
 # Introduction
 
 This directory contains an R script called run_analysis.R that cleans and summarizes the Human Activity Recognition Using Smartphones Data Set.  More information can be found at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
