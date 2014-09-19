@@ -18,7 +18,7 @@ run_analysis <- function() {
     
     ## 2. Extract only the measurements on the mean and standard deviation for each measurement
     ##    Match the column name to a case insensitive regular expression to find features containing mean() or std()
-    ##    Specify TRUEs at the end to keep subject id and activity columns.  They won't match the regex
+    ##    Specify TRUEs at the end to keep subject id and activity columns.  They are in addition to the features
     tidy_data <- tidy_data[,c(grepl("(.*)(mean|std)\\(\\)(.*)", features_info$FeatureName), rep(TRUE, 2))]
     
     ## 3. Use descriptive activity names
