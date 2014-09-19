@@ -11,19 +11,27 @@ The tidy data set combines the training and test data into one data set, selects
 
 # Variable Descriptions
 **Activity**: 
+
 The activity performed during measurements (one of WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING). 
 
 **SubjectID**: 
+
 The unique identifier of the subject (integer between 1 and 30).  
 
-**TimeBodyAccelerometerMeanX 
-TimeBodyAccelerometerMeanY 
-TimeBodyAccelerometerMeanZ: **
+**TimeBodyAccelerometerMeanX** 
+
+**TimeBodyAccelerometerMeanY** 
+
+**TimeBodyAccelerometerMeanZ:**
+
 The mean of the body component of the linear acceleration readings in the x, y, and z axial over the sample window. (Normalized data with no units in the time domain.)
 
-**TimeBodyAccelerometerStdX 
-TimeBodyAccelerometerStdY
-TimeBodyAccelerometerStdZ:** 
+**TimeBodyAccelerometerStdX **
+
+**TimeBodyAccelerometerStdY**
+
+**TimeBodyAccelerometerStdZ:** 
+
 The standard deviation of the body component of the linear acceleration readings in the x, y and z axials over the sample window. (Normalized data with no units in the time domain.)
 
 **TimeGravityAccelerometerMeanX
