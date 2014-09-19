@@ -128,7 +128,7 @@ The mean and standard deviation of the magnitude of the body rotational velocity
 Click [here] (https://github.com/carolynduby/CleaningDataProject/blob/master/feature_name_map.txt) to view an R table  containing the mappings between the original data set column names and the tidy data set column names.  You can load the table from this file into R using the read.table command:
 ````
 feature_name_map <- read.table(file="feature_name_map.txt", header=TRUE)
-head(feature_name_map1)
+head(feature_name_map)
   OriginalDataSetName            TidyDataSetName
 1   tBodyAcc-mean()-X TimeBodyAccelerometerMeanX
 2   tBodyAcc-mean()-Y TimeBodyAccelerometerMeanY
