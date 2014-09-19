@@ -3,6 +3,7 @@ This tidy data set was created from a set of smartphone measurements.   A group 
 
 The tidy data set combines the training and test data into one data set, selects the measurements containing text mean() or std(), and calculates the mean of these measurements for each subject and activity combination.   
 
+# Variable Descriptions
 Activity: The activity performed during measurements (one of WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING). 
 
 SubjectID: The unique identifier of the subject (integer between 1 and 30).  
@@ -123,7 +124,19 @@ FrequencyBodyBodyGyroscopeJerkMagMean
 FrequencyBodyBodyGyroscopeJerkMagStd:
 The mean and standard deviation of the magnitude of the body rotational velocity jerk over the sample window converted to the frequency domain. (Normalized data with no units in frequency domain.) (NOTE: BodyBody in the column names is preserved from the initial data set.  The original should have used a single Body to be consistent.)
 
-
+# Mapping of Original Data Source Columns to Tidy Data Set Columns
+Click [here] (https://github.com/carolynduby/CleaningDataProject/blob/master/feature_name_map.txt) to view an R table  containing the mappings between the original data set column names and the tidy data set column names.  You can load the table from this file into R using the read.table command:
+````
+feature_name_map <- read.table(file="feature_name_map.txt", header=TRUE)
+head(feature_name_map1)
+  OriginalDataSetName            TidyDataSetName
+1   tBodyAcc-mean()-X TimeBodyAccelerometerMeanX
+2   tBodyAcc-mean()-Y TimeBodyAccelerometerMeanY
+3   tBodyAcc-mean()-Z TimeBodyAccelerometerMeanZ
+4    tBodyAcc-std()-X  TimeBodyAccelerometerStdX
+5    tBodyAcc-std()-Y  TimeBodyAccelerometerStdY
+6    tBodyAcc-std()-Z  TimeBodyAccelerometerStdZ
+````
 # Original Data Source
 The original data set can be found [here] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
