@@ -4,6 +4,8 @@
 ## Unzip the downloaded file to a directory on your computer. Preserve the directory structure of the zip file.
 ## In r, execute the command setwd('directory containing unzipped data')
 ## Run this function
+## The script creates a file called smartphone_means_and_std_means.txt.
+## Use the read_tidy_data function to read the tidy data file into R.
 run_analysis <- function() {
     data_dir <- "getdata_projectfiles_UCI HAR Dataset\\UCI HAR Dataset"
     
@@ -14,8 +16,9 @@ run_analysis <- function() {
     tidy_data <- merge_training_and_test_data(data_dir, features_info)
     
     ## 2. Extract only the measurements on the mean and standard deviation for each measurement
-    ##    Match the column name to a case insensitive regular expression to find features containing mean or std
-    tidy_data <- tidy_data[,c(grepl("(.*)(mean|std)\\(\\)(.*)", features_info$FeatureName), rep(TRUE, 3))]
+    ##    Match the column name to a case insensitive regular expression to find features containing mean() or std()
+    ##    Specify TRUEs at the end to keep subject id and activity columns.  They won't match the regex
+    tidy_data <- tidy_data[,c(grepl("(.*)(mean|std)\\(\\)(.*)", features_info$FeatureName), rep(TRUE, 2))]
     
     ## 3. Use descriptive activity names
     activity_labels <- read.csv(paste(data_dir, "activity_labels.txt", sep="\\"), sep=" ", col.names=c('ActivityID', 'Activity'), colClasses=c('integer','character'), header=FALSE, strip.white=TRUE)
@@ -56,7 +59,7 @@ read_smartphone_data <- function(data_dir, data_type, feature_col_info) {
     samples <- read.table(sample_file, col.names=feature_col_info$FeatureName, colClasses=c('numeric'), header=FALSE)
     
     ## Add the subject ids and activity ids to the samples to make a single data frame
-    mutate(samples, SubjectID=subject_ids$SubjectID, Activity=activity_ids$Activity, SourceSet=data_type)
+    mutate(samples, SubjectID=subject_ids$SubjectID, Activity=activity_ids$Activity)
 }
 
 ## Take the input column names and replace them with more descriptive names.
