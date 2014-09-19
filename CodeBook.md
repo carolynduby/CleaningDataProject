@@ -10,124 +10,126 @@ The tidy data set combines the training and test data into one data set, selects
 * When modifying the column names, I changed Acc to Accelerometer and Gyro to gyroscope and t and f to Time and Frequency.  I left Std (Standard Deviation) and Mag (Magnitude) abbreviated.  They are more standard abbreviations and I felt that they made the variable names way too long when expanded out.  These could easily be changed by modifying the get_descriptive_variable_name function to add more substitions.
 
 # Variable Descriptions
-Activity: The activity performed during measurements (one of WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING). 
+**Activity**: 
+The activity performed during measurements (one of WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING). 
 
-SubjectID: The unique identifier of the subject (integer between 1 and 30).  
+**SubjectID**: 
+The unique identifier of the subject (integer between 1 and 30).  
 
-TimeBodyAccelerometerMeanX 
+**TimeBodyAccelerometerMeanX 
 TimeBodyAccelerometerMeanY 
-TimeBodyAccelerometerMeanZ: 
+TimeBodyAccelerometerMeanZ: **
 The mean of the body component of the linear acceleration readings in the x, y, and z axial over the sample window. (Normalized data with no units in the time domain.)
 
-TimeBodyAccelerometerStdX 
+**TimeBodyAccelerometerStdX 
 TimeBodyAccelerometerStdY
-TimeBodyAccelerometerStdZ: 
+TimeBodyAccelerometerStdZ:** 
 The standard deviation of the body component of the linear acceleration readings in the x, y and z axials over the sample window. (Normalized data with no units in the time domain.)
 
-TimeGravityAccelerometerMeanX
+**TimeGravityAccelerometerMeanX
 TimeGravityAccelerometerMeanY 
-TimeGravityAccelerometerMeanZ: 
+TimeGravityAccelerometerMeanZ: **
 The mean of the gravity component of the linear acceleration readings in the x,y, and z axial over the sample window. (Normalized data with no units in the time domain.)
 
-TimeGravityAccelerometerStdX
+**TimeGravityAccelerometerStdX
 TimeGravityAccelerometerStdY
-TimeGravityAccelerometerStdZ: 
+TimeGravityAccelerometerStdZ:** 
 The standard deviation of the gravity component of the linear acceleration readings in the x, y and z axial over the sample window.(Normalized data with no units in the time domain.)
 
-TimeBodyAccelerometerJerkMeanX
+**TimeBodyAccelerometerJerkMeanX
 TimeBodyAccelerometerJerkMeanY
-TimeBodyAccelerometerJerkMeanZ: 
+TimeBodyAccelerometerJerkMeanZ: **
 The mean of the accelerometer jerk in the x, y and z axial over the sample window.  Jerk is the body linear acceleration derived in time.  (Normalized data with no units in the time domain.)
 
-TimeBodyAccelerometerJerkStdX
+**TimeBodyAccelerometerJerkStdX
 TimeBodyAccelerometerJerkStdY
-TimeBodyAccelerometerJerkStdZ:
+TimeBodyAccelerometerJerkStdZ:**
 The standard deviation of the jerk in the x, y and z axial over the sample window.  Jerk is the body linear acceleration derived in time.  (Normalized data with no units in the time domain.)
 
-TimeBodyGyroscopeMeanX
+**TimeBodyGyroscopeMeanX
 TimeBodyGyroscopeMeanY
-TimeBodyGyroscopeMeanZ:
+TimeBodyGyroscopeMeanZ:**
 The mean of the body component of the rotational velocity readings in the x, y, and z axial over the sample window. (Normalized data with no units in the time domain.)
 
-TimeBodyGyroscopeStdX
+**TimeBodyGyroscopeStdX
 TimeBodyGyroscopeStdY
-TimeBodyGyroscopeStdZ:
+TimeBodyGyroscopeStdZ:**
 The standard deviation of the body component of the rotational velocity readings in the x, y, and z axial over the sample window. (Normalized data with no units in the time domain.)
 
-TimeBodyGyroscopeJerkMeanX
+**TimeBodyGyroscopeJerkMeanX
 TimeBodyGyroscopeJerkMeanY
-TimeBodyGyroscopeJerkMeanZ:
+TimeBodyGyroscopeJerkMeanZ:**
 The mean of the gyroscope jerk in the x, y and z axial over the sample window.  Jerk is the body rotational velocity derived in time.  (Normalized data with no units in the time domain.)
 
-TimeBodyGyroscopeJerkStdX
+**TimeBodyGyroscopeJerkStdX
 TimeBodyGyroscopeJerkStdY
-TimeBodyGyroscopeJerkStdZ:
+TimeBodyGyroscopeJerkStdZ:**
 The mean of the gyroscope jerk in the x, y and z axial over the sample window.  Jerk is the body rotational velocity derived in time.  (Normalized data with no units in the time domain.)
 
-TimeBodyAccelerometerMagMean
-TimeBodyAccelerometerMagStd:
+**TimeBodyAccelerometerMagMean
+TimeBodyAccelerometerMagStd:**
 The mean and standard deviation of the magnitude of the body component of the linear acceleration measurements over the sample window.  (Normalized data with no units in the time domain.)
 
-TimeGravityAccelerometerMagMean
-TimeGravityAccelerometerMagStd:
+**TimeGravityAccelerometerMagMean
+TimeGravityAccelerometerMagStd:**
 The mean and standard deviation of the magnitude of the gravity component of the linear acceleration measurements over the sample window.  (Normalized data with no units in the time domain.)
 
-TimeBodyAccelerometerJerkMagMean
-TimeBodyAccelerometerJerkMagStd:
+**TimeBodyAccelerometerJerkMagMean
+TimeBodyAccelerometerJerkMagStd:**
 The mean and standard deviation of the magnitude of the body linear acceleration jerk over the sample window. (Normalized data with no units in time domain.)
 
-TimeBodyGyroscopeMagMean
-TimeBodyGyroscopeMagStd:
+**TimeBodyGyroscopeMagMean
+TimeBodyGyroscopeMagStd:**
 The mean and standard deviation of the magnitude of the gravity component of the linear acceleration measurements over the sample window.  (Normalized data with no units in the time domain.)
 
-TimeBodyGyroscopeJerkMagMean
-TimeBodyGyroscopeJerkMagStd:
+**TimeBodyGyroscopeJerkMagMean
+TimeBodyGyroscopeJerkMagStd:**
 The mean and standard deviation of the magnitude of the body rotational velocity jerk over the sample window. (Normalized data with no units in time domain.)
 
-FrequencyBodyAccelerometerMeanX
+**FrequencyBodyAccelerometerMeanX
 FrequencyBodyAccelerometerMeanY
-FrequencyBodyAccelerometerMeanZ:
+FrequencyBodyAccelerometerMeanZ:**
 The mean of the body component of the linear acceleration readings in the x, y, and z axial over the sample window converted to the frequency domain. (Normalized data with no units in the frequency domain.)
 
-FrequencyBodyAccelerometerStdX
+**FrequencyBodyAccelerometerStdX
 FrequencyBodyAccelerometerStdY
-FrequencyBodyAccelerometerStdZ:
+FrequencyBodyAccelerometerStdZ:**
 The standard deviation of the body component of the linear acceleration readings in the x, y, and z axial over the sample window converted to the frequency domain. (Normalized data with no units in the frequency domain.)
 
-FrequencyBodyAccelerometerJerkMeanX
+**FrequencyBodyAccelerometerJerkMeanX
 FrequencyBodyAccelerometerJerkMeanY
-FrequencyBodyAccelerometerJerkMeanZ:
+FrequencyBodyAccelerometerJerkMeanZ:**
 The mean of the accelerometer jerk in the x, y and z axial over the sample window converted to the frequency domain.  Jerk is the body linear acceleration derived in time.  (Normalized data with no units in the frequency domain.)
 
-FrequencyBodyAccelerometerJerkStdX
+**FrequencyBodyAccelerometerJerkStdX
 FrequencyBodyAccelerometerJerkStdY
-FrequencyBodyAccelerometerJerkStdZ:
+FrequencyBodyAccelerometerJerkStdZ:**
 The standard deviation of the accelerometer jerk in the x, y and z axial over the sample window converted to the frequency domain.  Jerk is the body linear acceleration derived in time.  (Normalized data with no units in the frequency domain.)
 
-FrequencyBodyGyroscopeMeanX
+**FrequencyBodyGyroscopeMeanX
 FrequencyBodyGyroscopeMeanY
-FrequencyBodyGyroscopeMeanZ:
+FrequencyBodyGyroscopeMeanZ:**
 The mean of the body component of the rotational velocity readings in the x, y, and z axial over the sample window converted to the frequency domain. (Normalized data with no units in the frequency domain.)
 
-FrequencyBodyGyroscopeStdX
+**FrequencyBodyGyroscopeStdX
 FrequencyBodyGyroscopeStdY
-FrequencyBodyGyroscopeStdZ:
+FrequencyBodyGyroscopeStdZ:**
 The standard deviation of the body component of the rotational velocity readings in the x, y, and z axial over the sample window converted to the frequency domain. (Normalized data with no units in the frequency domain.)
 
-FrequencyBodyAccelerometerMagMean
-FrequencyBodyAccelerometerMagStd:
+**FrequencyBodyAccelerometerMagMean
+FrequencyBodyAccelerometerMagStd:**
 The mean and standard deviation of the magnitude of the body component of the linear acceleration measurements over the sample window converted to the frequency domain.  (Normalized data with no units in the frequency domain.)
 
-FrequencyBodyBodyAccelerometerJerkMagMean
-FrequencyBodyBodyAccelerometerJerkMagStd:
+**FrequencyBodyBodyAccelerometerJerkMagMean
+FrequencyBodyBodyAccelerometerJerkMagStd:**
 The mean and standard deviation of the magnitude of the body linear acceleration jerk over the sample window converted to frequency domain. (Normalized data with no units in frequency domain.) (NOTE: BodyBody in the column names is preserved from the initial data set.  The original should have used a single Body to be consistent.)
 
-FrequencyBodyBodyGyroscopeMagMean
-FrequencyBodyBodyGyroscopeMagStd:
+**FrequencyBodyBodyGyroscopeMagMean
+FrequencyBodyBodyGyroscopeMagStd:**
 The mean and standard deviation of the magnitude of the gravity component of the linear acceleration measurements over the sample window converted to the frequency domain.  (Normalized data with no units in the frequency domain.) (NOTE: BodyBody in the column names is preserved from the initial data set.  The original should have used a single Body to be consistent.)
 
-FrequencyBodyBodyGyroscopeJerkMagMean
-FrequencyBodyBodyGyroscopeJerkMagStd:
+**FrequencyBodyBodyGyroscopeJerkMagMean
+FrequencyBodyBodyGyroscopeJerkMagStd:**
 The mean and standard deviation of the magnitude of the body rotational velocity jerk over the sample window converted to the frequency domain. (Normalized data with no units in frequency domain.) (NOTE: BodyBody in the column names is preserved from the initial data set.  The original should have used a single Body to be consistent.)
 
 # Mapping of Original Data Source Columns to Tidy Data Set Columns
