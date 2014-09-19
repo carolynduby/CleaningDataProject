@@ -1,7 +1,13 @@
 # Introduction
 This tidy data set was created from a set of smartphone measurements.   A group of 30 volunteers ranging in age from 19-48 years performed six activities while wearing a Samsung Galaxy S II smartphone on their waist.  The six activities were WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING.  The smartphones measured the 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.  The activities were determined by a video recording and manually labelled.  The subjects were randomly partitioned into a training and test set. 
 
-The tidy data set combines the training and test data into one data set, selects the measurements containing text mean() or std(), and calculates the mean of these measurements for each subject and activity combination.   
+The tidy data set combines the training and test data into one data set, selects the measurements containing text mean() or std(), and calculates the mean of these measurements for each subject and activity combination. 
+
+# Design Decisions
+* Community TA Wendel Hope describes in this discussion forum [thread] (https://class.coursera.org/getdata-007/forum/thread?thread_id=201) why the measurements have no units.  The short explanation states that the code book for the original data set notes that the feature values are normalized and thus have no units.
+* I chose to include the columns containing the text mean() and std().  This step of the project requirements was up to interpretation.  A solution could have included columns containing Mean as well, but I thought the selection fit the requirements best.  It would be simple to modify this script to include more columns by changing the regular expression used to select the columns and by adding new transformations to create descriptive column values.
+* I used camel case variable names.  The descriptive variable names were too long to read easily all in lower case.  Users of the data can change the case of the columns after reading the table into R if they prefer.
+* When modifying the column names, I changed Acc to Accelerometer and Gyro to gyroscope and t and f to Time and Frequency.  I left Std (Standard Deviation) and Mag (Magnitude) abbreviated.  They are more standard abbreviations and I felt that they made the variable names way too long when expanded out.  These could easily be changed by modifying the get_descriptive_variable_name function to add more substitions.
 
 # Variable Descriptions
 Activity: The activity performed during measurements (one of WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING). 
