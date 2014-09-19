@@ -14,13 +14,13 @@ When reading this section you may find it helpful to refer to Community TA David
 * Reads the features.txt file into a data frame containing the FeatureID and FeatureName
 * Step 1 of requirements: The training and test data follow the same file format but the names of the files and directories are different.  The script calls the read_smartphone_data function twice with a different parameter to specify the test or train data.  Each data set is constructed as follows:
 
-** The subject file contains the integer identifiers of the subject corresponding to each set of measurements.  The script reads the train/subject_train.txt file or test/subject_test.txt file and converts it to a single integer column called SubjectID.
+  * The subject file contains the integer identifiers of the subject corresponding to each set of measurements.  The script reads the train/subject_train.txt file or test/subject_test.txt file and converts it to a single integer column called SubjectID.
 
-** The activity file contains the integer identifiers of the activities corresponding to each set of measurements.  The script reads the train/y_train.txt and test/y_test.txt file and converts it to a column called Activity that contains the identifier of the activity performed.
+  * The activity file contains the integer identifiers of the activities corresponding to each set of measurements.  The script reads the train/y_train.txt and test/y_test.txt file and converts it to a column called Activity that contains the identifier of the activity performed.
 
-** The sample files contain one measurement for each of the 561 features.  The script reads train/x_train.txt and test/x_test.txt into a data frame.  The column labels are set to the FeatureNames as read in the very first step of the script.
+  * The sample files contain one measurement for each of the 561 features.  The script reads train/x_train.txt and test/x_test.txt into a data frame.  The column labels are set to the FeatureNames as read in the very first step of the script.
 
-** The SubjectID, Activity, and sample data are merged into a single data frame.  The rows of each dataframe correspond to one another by position, i.e. the first row of SubjectID and the first row of Activity are the subject and activity for the first row of sample data.
+  * The SubjectID, Activity, and sample data are merged into a single data frame.  The rows of each dataframe correspond to one another by position, i.e. the first row of SubjectID and the first row of Activity are the subject and activity for the first row of sample data.
 
 * We now have a single data frame for one each set of data (training and test).  The data frame contains the subject id, activity id and 561 feature sample measurements.
 * The training and test data frames are merged into one data frame using rbind.
