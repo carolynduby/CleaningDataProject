@@ -1,3 +1,4 @@
+library(plyr)
 ## Main function to clean and create tidy data set for Human Activity Recognition Using Smartphones Data Set.
 ## Before running this script download the data from:
 ##     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 

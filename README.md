@@ -47,12 +47,16 @@ For a full mapping of original data set features to tidy data set features see t
 * The resulting text file can be read using read.table as described in the next section.
 
 # How to Run the Script
-* Download the [zipped data files] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
-* Save the downloaded zip file.
-* Expand the zip file on your computer preserving directories.  On Linux you can use the unzip command. On Windows open the file explorer, select the zip file, and select Expand All...  Another alternative on Windows is to use a WinZip(www.winzip.com).  
-* You should now have a 'getdata_projectfiles_UCI HAR Dataset\UCI HAR Dataset' directory containing another directory 'UCI HAR Dataset'.  The directory containing 'getdata_projectfiles_UCI HAR Dataset\UCI HAR Dataset' will be referred to as WORKING_DIR_NAME in subsequent steps.
-* Open R
-* Download the run_analysis.R script.  Save it to the directory WORKING_DIR_NAME.
+* Create a new directory to house the script and data files.  This directory will be referred to as WORKING_DIR.
+* In the working directory perform the following git command to download the files:
+````
+git clone https://github.com/carolynduby/CleaningDataProject.git
+````
+* Download to WORKING_DIR the [zipped data files] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+* Expand the zip file to WORKING_DIR preserving directories.  On Linux you can use the unzip command. On Windows open the file explorer, select the zip file, and select Expand All...  Another alternative on Windows is to use a WinZip(www.winzip.com).  
+* In WORKING_DIR you should now have a 'getdata_projectfiles_UCI HAR Dataset\UCI HAR Dataset' directory containing another directory 'UCI HAR Dataset'.  The directory containing 'getdata_projectfiles_UCI HAR Dataset\UCI HAR Dataset' will be referred to as WORKING_DIR_NAME in subsequent steps.
+* Open R Studio
+* Install the plyr package if you have not already. install.packages("plyr")
 * Execute the following R command to set the working directory to the directory getdata_projectfiles_UCI HAR Dataset\UCI HAR Dataset containing the expanded data file, source the script, and execute the script.
 ````
         setwd("WORKING_DIR_NAME")
@@ -61,8 +65,8 @@ For a full mapping of original data set features to tidy data set features see t
 ````
 For example:
 ````
-        setwd("C:/ckd/personal/coursera/CleaningData/Project")
-        source('C:/ckd/personal/coursera/CleaningData/Project/run_analysis.R')
+        setwd('C:/ckd/personal/coursera/CleaningData/Test/CleaningDataProject')
+        source('C:/ckd/personal/coursera/CleaningData/Test/CleaningDataProject/run_analysis.R')
         run_analysis()
 ````
 * The function will read the source data set and creates the file smartphone_mean_and_std_means.txt in the WORKING_DIR_NAME.
