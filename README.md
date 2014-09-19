@@ -1,7 +1,7 @@
 # Introduction
-This directory contains an R script called run_analysis.R that cleans and summarizes a subset of the measurements in the (Human Activity Recognition Using Smartphones Data Set)[http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones] The script merges the data into a single data set, reduces the number of measurements, and summarizes the sample measurements.  
+This directory contains an R script called run_analysis.R that cleans and summarizes a subset of the measurements in the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) The script merges the data into a single data set, reduces the number of measurements, and summarizes the sample measurements.  
 
-The requirements for this analysis are specified by the (Getting and Cleaning Data Course)[https://class.coursera.org/getdata-007] Project assignment.
+The requirements for this analysis are specified by the [Getting and Cleaning Data Course](https://class.coursera.org/getdata-007) Project assignment.
 
 # What the Analysis Script does
 ## Original Data Set Overview
@@ -10,7 +10,7 @@ The original data contains 561 feature measurements recorded by the acceleromete
 At a high level, the analysis script reads the training and test data into a single dataframe containing the subject id, activity, and the 561 feature measurements.  The analysis selects 66 columns with feature names containing mean() or std().  The script maps the numeric activity ids to meaningful names such as SITTING, WALKING, etc.  The script cleans up the column labels replacing them with cleaner, more meaningful names.  Finally the script calculates the mean of each measurement aggregated by subject and activity.  The resulting data set is written to the file smartphone_means_and_std_means.txt.  The resulting file is readable by R using the read.table command.
 Consult the end of this README file for instructions on how to run the analysis script and read the output.
 ## Analysis Algorithm Details
-When reading this section you may find it helpful to refer to Community TA David Hood's (diagram of the file structure)[https://coursera-forum-screenshots.s3.amazonaws.com/ab/a2776024af11e4a69d5576f8bc8459/Slide2.png].  Looking in more detail the analysis script operates as follows:
+When reading this section you may find it helpful to refer to Community TA David Hood's [diagram of the file structure](https://coursera-forum-screenshots.s3.amazonaws.com/ab/a2776024af11e4a69d5576f8bc8459/Slide2.png).  Looking in more detail the analysis script operates as follows:
 * Reads the features.txt file into a data frame containing the FeatureID and FeatureName
 * Step 1 of requirements: The training and test data follow the same file format but the names of the files and directories are different.  The script calls the read_smartphone_data function twice with a different parameter to specify the test or train data.  Each data set is constructed as follows:
 ** The subject file contains the integer identifiers of the subject corresponding to each set of measurements.  The script reads the train/subject_train.txt file or test/subject_test.txt file and converts it to a single integer column called SubjectID.
@@ -39,6 +39,7 @@ For a full mapping of original data set features to tidy data set features see t
 * We now have a data frame with a single row for each subject id and activity combination.  The other 66 columns are the means of the measurements for each subject and activity.
 * The script writes the file to smartphone_mean_and_std_means.txt
 * The resulting text file can be read using read.table as described in the next section.
+
 # How to Run the Script
 * Download the [zipped data files] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 * Save the downloaded zip file.
